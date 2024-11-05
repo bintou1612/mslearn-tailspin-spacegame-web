@@ -17,7 +17,7 @@ steps:
       displayName: 'Use .Net SDK 6.x'
       inputs:
         packageType: sdk
-        version: '5.x'
+        version: '6.x'
         
     - task: Npm@1
       displayName: 'Run npm install'
@@ -44,5 +44,5 @@ steps:
       displayName: 'Build the project - Release'
       inputs:
         command: 'build'
-        arguments: '--no restore --configuration Release'
+        arguments: '--configuration Release'
         projects: '**/*.csproj'
